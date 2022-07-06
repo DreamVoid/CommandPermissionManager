@@ -1,16 +1,19 @@
 name: ${project.name}
 author: DreamVoid
 description: ${project.description}
-main: me.dreamvoid.template.main
+main: me.dreamvoid.commandpermissionmanager.main
 version: ${project.version}
 api-version: 1.13
 prefix: DreamVoidPlugin
 webside: ${project.url}
+load: POSTWORLD
 commands:
-  some-command:
-    description: Some plugin command.
-    permission: some-permission
+  commandpermissionmanager:
+    description: CommandPermissionManager main command.
+    permission: commandpermissionmanager.command
+    aliases:
+      - cpm
 permissions:
-  some-permission:
-    description: Some plugin permission.
+  commandpermissionmanager.command:
+    description: Allow use /commandpermissionmanager
     default: op
