@@ -5,3 +5,4 @@ commands-with-plugin: # Change the permissions of all commands in the plugin to 
 messages:
   reload: "&eConfig reload, but it recommended to restart server if you delete some commands."
   help: "&eTry /commandpermissionmanager reload"
+bStats: true
