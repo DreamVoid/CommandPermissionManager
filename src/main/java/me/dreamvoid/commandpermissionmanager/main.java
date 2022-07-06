@@ -14,6 +14,9 @@ public class main extends JavaPlugin {
     @Override
     public void onLoad() {
         saveDefaultConfig();
+        if(getConfig().getBoolean("bStats",true)){
+            new Metrics(this, 15686);
+        }
     }
 
     @Override
