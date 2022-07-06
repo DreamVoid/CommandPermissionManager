@@ -58,9 +58,6 @@ public class main extends JavaPlugin {
             }
             try {
                 PluginCommand cmd = Bukkit.getPluginCommand(c[0]);
-                if(cmd.getPermission() != null || !Objects.equals(cmd.getPermission(), "")){
-                    getLogger().warning("It is recommend to use command " + c[0] + " own permission " + cmd.getPermission());
-                }
                 cmd.setPermission(c[1]);
                 if(getConfig().getBoolean("make-list-unknown-command", true)) cmd.setPermissionMessage("Unknown command. Type \"/help\" for help.");
                 commands.add(c[0]);
@@ -82,9 +79,6 @@ public class main extends JavaPlugin {
                 for (String k : keySet) {
                     if(!commands.contains(k)) {
                         PluginCommand cmd = Bukkit.getPluginCommand(k);
-                        if(cmd.getPermission() != null || !Objects.equals(cmd.getPermission(), "")){
-                            getLogger().warning("It is recommend to use command " + c[0] + " own permission " + cmd.getPermission());
-                        }
                         cmd.setPermission(c[1]);
                         if(getConfig().getBoolean("make-list-unknown-command", true)) cmd.setPermissionMessage("Unknown command. Type \"/help\" for help.");
                     } else {
