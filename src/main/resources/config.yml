@@ -1,9 +1,17 @@
-commands: # Change single command's permission.
+# Change single command's permission.
+commands:
   - "help:bukkit.command.help"
-commands-with-plugin: # Change the permissions of all commands in the plugin to which the command belongs
+
+# Change the permissions of all commands in the plugin to which the command belongs
+commands-with-plugin:
   - "mv:multiverse.use"
+
+# Send unknown command message to player
 make-list-unknown-command: true
+
+# Plugin Message
 messages:
   reload: "&eConfig reload, but it recommended to restart server if you delete some commands."
   help: "&eTry /commandpermissionmanager reload"
+
 bStats: true
